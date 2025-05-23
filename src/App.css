@@ -1,38 +1,300 @@
-.App {
-  text-align: center;
+/* Güncellenmiş App.css - React portfolyo için */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f1117;
+  color: #ddd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #2a9df4;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 70%;
+  object-fit: cover;
+  border: 3px solid #2a9df4;
+  box-shadow: 0 0 10px #2a9df4aa;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.profile-photo:hover {
+  transform: scale(1.1);
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #2a9df4;
+  margin: 0;
+  flex-grow: 1;
+  text-shadow: 0 0 5px #2a9df4aa;
+}
+
+nav a {
+  color: #bbb;
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+nav a:hover,
+nav a:focus {
+  color: #0f1117;
+  background-color: #2a9df4;
+  box-shadow: 0 2px 8px #2a9df4aa;
+  outline: none;
+}
+
+main {
+  min-height: 450px;
+}
+
+.page {
+  background: #1e222b;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(42, 157, 244, 0.25);
+  transition: background 0.3s ease;
+}
+
+.page:hover {
+  background: #28303f;
+}
+
+h2 {
+  color: #2a9df4;
+  margin-top: 0;
+  font-weight: 700;
+  text-shadow: 0 0 4px #2a9df4aa;
+}
+
+/* Proje Kartları - Portfolio listesi */
+.project-card {
+  background: #2a2f3c;
+  padding: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  margin-bottom: 15px;
+}
+
+.project-card:hover {
+  background: #3b4361;
+  transform: translateY(-5px);
+}
+
+/* Proje detay görünümü */
+.project-details {
+  background: #2f3445;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  color: #eee;
+}
+
+.back-btn {
+  background: transparent;
+  border: 2px solid #2a9df4;
+  color: #2a9df4;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  user-select: none;
+}
+.back-btn:hover {
+  background-color: #2a9df4;
+  color: #0f1117;
+  box-shadow: 0 0 10px #2a9df4aa;
+}
+
+/* Proje içindeki resimler */
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-image {
+  width: calc(20% - 12px);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(42, 157, 244, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  height: 100px;
+}
+.project-image:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(42, 157, 244, 0.6);
+}
+
+/* İletişim formu stili */
+.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-form label {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #a3c9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 1.1rem;
+  background-color: #1a1f2a;
+  color: #eee;
+  box-shadow: inset 0 0 5px #2a9df4aa;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background-color: #28303f;
+  box-shadow: 0 0 8px #2a9df4;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background: #2a9df4;
+  border: none;
+  padding: 12px 28px;
+  color: #0f1117;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px #2a9df4bb;
+  user-select: none;
+}
+.contact-form button:hover {
+  background: #1c6fcc;
+  box-shadow: 0 6px 18px #1c6fcccc;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+footer a {
+  color: #2a9df4;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #90c9ff;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .profile-photo {
+    width: 65px;
+    height: 65px;
+    border-width: 2px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 0.95rem;
+    padding: 5px 12px;
+  }
+
+  main {
+    min-height: 350px;
+  }
+
+  .project-image {
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .profile-photo {
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
   }
 }
