@@ -217,6 +217,11 @@ footer {
   user-select: none;
 }
 
+footer .social-links {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
 footer a {
   color: #2a9df4;
   text-decoration: none;
@@ -228,6 +233,7 @@ footer a {
 footer a:hover {
   color: #90c9ff;
 }
+
 
 /* Responsive düzenlemeler */
 @media (max-width: 768px) {
@@ -297,4 +303,88 @@ footer a:hover {
   .contact-form textarea {
     width: 100%;
   }
+  /* ... senin mevcut CSS kodların ... */
+
+
+  /* Mobil uyumluluk */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+
+    header {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+
+    .profile-photo {
+      width: 60px;
+      height: 60px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+    }
+
+    nav li {
+      margin-left: 0;
+      margin-bottom: 8px;
+    }
+
+    nav a {
+      font-size: 1.1rem;
+      padding: 8px 12px;
+      display: block;
+      text-align: center;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    .page {
+      padding: 15px;
+    }
+
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #2a9df4aa;
+    }
+
+    .project-card, .project-details {
+      padding: 15px;
+    }
+
+    .back-btn {
+      font-size: 1rem;
+      padding: 5px 10px;
+    }
+
+    .social-links {
+      text-align: center;
+      margin: 15px 0;
+
+    }
+  }
+
+
 }

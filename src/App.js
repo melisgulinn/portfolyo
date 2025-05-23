@@ -6,6 +6,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import './App.css';
 import melisPhoto from './melis(2).jpeg';
 
+
 // Proje resimleri
 import proje1 from './proje1.png';
 import proje2 from './proje2.png';
@@ -244,6 +245,11 @@ function App() {
         <footer>
           <p>© 2025 Melis Gülin Turgut - Tüm Hakları Saklıdır</p>
         </footer>
+          <div className="social-links">
+              <a href="https://github.com/melisgulinn" target="_blank" rel="noopener noreferrer">Github</a> |{" "}
+              <a href="https://facebook.com/fakeprofil" target="_blank" rel="noopener noreferrer">Facebook</a> |{" "}
+              <a href="https://twitter.com/fakex" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
       </>
   );
 }
