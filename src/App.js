@@ -244,6 +244,11 @@ function App() {
         <footer>
           <p>© 2025 Melis Gülin Turgut - Tüm Hakları Saklıdır</p>
         </footer>
+          <div className="social-links">
+              <a href="https://github.com/melisgulinn" target="_blank" rel="noopener noreferrer">Github</a> |{" "}
+              <a href="https://facebook.com/fakeprofil" target="_blank" rel="noopener noreferrer">Facebook</a> |{" "}
+              <a href="https://twitter.com/fakex" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
       </>
   );
 }
